@@ -1,0 +1,207 @@
+<script>
+    var edad = parseInt(prompt("ingrese su edad"));
+    var sexo = prompt("Es Hombre o Mujer");
+    var peso = parseInt(prompt("Agregue su peso (kg)"));
+    var altura = parseInt(prompt("Agregue su altura (cm)"));
+    var actividad =prompt("Agregue su actividad fisica semanal (0 AL 7)");
+    HombreF( peso, altura, edad);
+    MujerF(peso, altura, edad);
+    switch (sexo) {
+        case 'Hombre':
+            if(actividad == 0){
+                var hombre= HombreF(peso, altura, edad);
+                console.log("Para mantener su peso necesita consumir " + hombre + " kcal diarias");
+                var hombre= HombreR(peso, altura, edad);
+                console.log("Para un superávit calórico necesita consumir " + hombre + " kcal diarias");
+                var hombre= HombreG(peso, altura, edad);
+                console.log("Para un deficit calórico necesita consumir " + hombre + " kcal diarias");
+            }
+            if(actividad == 1 || actividad == 2){
+                var hombre= HombreA(peso, altura, edad);
+                console.log("Para mantener su peso necesita consumir " + hombre + " kcal diarias");
+                var hombre= HombreB(peso, altura, edad);
+                console.log("Para un superávit calórico necesita consumir " + hombre + " kcal diarias");
+                var hombre= HombreC(peso, altura, edad);
+                console.log("Para un deficit calórico necesita consumir " + hombre + " kcal diarias");
+            }
+            if(actividad == 3|| actividad == 4){
+                var hombre= HombreD(peso, altura, edad);
+                console.log("Para mantener su peso necesita consumir " + hombre + " kcal diarias");
+                var hombre= HombreE(peso, altura, edad);
+                console.log("Para un superávit calórico necesita consumir " + hombre + " kcal diarias");
+                var hombre= HombreI(peso, altura, edad);
+                console.log("Para un deficit calórico necesita consumir " + hombre + " kcal diarias");
+            }
+            if(actividad == 5 || actividad == 6){
+                var hombre= HombreJ(peso, altura, edad);
+                console.log("Para mantener su peso necesita consumir " + hombre + " kcal diarias");
+                var hombre= HombreK(peso, altura, edad);
+                console.log("Para un superávit calórico necesita consumir " + hombre + " kcal diarias");
+                var hombre= HombreL(peso, altura, edad);
+                console.log("Para un deficit calórico necesita consumir " + hombre + " kcal diarias");
+            }
+            if(actividad == 7){
+                var hombre= HombreO(peso, altura, edad);
+                console.log("Para mantener su peso necesita consumir " + hombre + " kcal diarias");
+                var hombre= HombreP(peso, altura, edad);
+                console.log("Para un superávit calórico necesita consumir " + hombre + " kcal diarias");
+                var hombre= HombreQ(peso, altura, edad);
+                console.log("Para un deficit calórico necesita consumir " + hombre + " kcal diarias");
+            }
+            break;
+        case 'Mujer':
+            if(actividad == 0){
+                var mujer=MujerF(peso, altura, edad);
+                console.log("Para mantener su peso necesita consumir " + mujer + " kcal diarias");
+                var mujer=MujerR(peso, altura, edad);
+                console.log("Para un superávit calórico necesita consumir " + mujer + " kcal diarias");
+                var mujer=MujerG(peso, altura, edad);
+                console.log("Para un deficit calórico necesita consumir " + mujer + " kcal diarias");
+            }
+            if(actividad == 1 || actividad == 2){
+                var mujer=MujerA(peso, altura, edad);
+                console.log("Para mantener su peso necesita consumir " + mujer + " kcal diarias");
+                var mujer=MujerB(peso, altura, edad);
+                console.log("Para un superávit calórico necesita consumir " + mujer + " kcal diarias");
+                var mujer=MujerC(peso, altura, edad);
+                console.log("Para un deficit calórico necesita consumir " + mujer + " kcal diarias");
+            }
+            if(actividad == 3 || actividad == 4){
+                var mujer=MujerD(peso, altura, edad);
+                console.log("Para mantener su peso necesita consumir " + mujer + " kcal diarias");
+                var mujer=MujerE(peso, altura, edad);
+                console.log("Para un superávit calórico necesita consumir " + mujer + " kcal diarias");
+                var mujer=MujerI(peso, altura, edad);
+                console.log("Para un deficit calórico necesita consumir " + mujer + " kcal diarias");
+            }
+            if(actividad == 5 || actividad == 6){
+                var mujer=MujerJ(peso, altura, edad);
+                console.log("Para mantener su peso necesita consumir " + mujer + " kcal diarias");
+                var mujer=MujerK(peso, altura, edad);
+                console.log("Para un superávit calórico necesita consumir " + mujer + " kcal diarias");
+                var mujer=MujerL(peso, altura, edad);
+                console.log("Para un deficit calórico necesita consumir " + mujer + " kcal diarias");
+            }
+            if(actividad == 7){
+                var mujer=MujerO(peso, altura, edad);
+                console.log("Para mantener su peso necesita consumir " + mujer + " kcal diarias");
+                var mujer=MujerP(peso, altura, edad);
+                console.log("Para un superávit calórico necesita consumir " + mujer + " kcal diarias");
+                var mujer=MujerQ(peso, altura, edad);
+                console.log("Para un deficit calórico necesita consumir " + mujer + " kcal diarias");
+            }
+            break;
+    }    
+    function HombreF (peso1, altura1, edad1) {
+        let formulaH = ((66.47) + ((13.75) * peso1) + (5 * altura1) - ((6.75) * edad1)) * 1.2;
+        return formulaH;
+    }
+    function HombreR (peso2, altura2, edad2) {
+        let formulaHa = ((66.47) + ((13.75) * peso2) + (5 * altura2) - ((6.75) * edad2) + 600) * 1.2;
+        return formulaHa;
+    }
+    function HombreG (peso3, altura3, edad3) {
+        let formulaHb = ((66.47) + ((13.75) * peso3) + (5 * altura3) - ((6.75) * edad3) - 600) * 1.2;
+        return formulaHb;
+    }
+    function MujerF (peso1, altura1, edad1) {
+        var formulaM = ((665.09) + ((9.56) * peso1) + ((1.84) * altura1) - ((4.67)* edad1)) * 1.2;
+        return formulaM;
+    }
+    function MujerR (peso2, altura2, edad2) {
+        var formulaM = ((665.09) + ((9.56) * peso2) + ((1.84) * altura2) - ((4.67)* edad2) + 600) * 1.2;
+        return formulaM;
+    } function MujerG (peso3, altura3, edad3) {
+        var formulaM = ((665.09) + ((9.56) * peso3) + ((1.84) * altura3) - ((4.67)* edad3) - 600) * 1.2;
+        return formulaM;
+    }
+    function HombreA (peso1, altura1, edad1) {
+        let formulaH = ((66.47) + ((13.75) * peso1) + (5 * altura1) - ((6.75) * edad1)) * 1.375;
+        return formulaH;
+    }
+    function HombreB (peso2, altura2, edad2) {
+        let formulaHa = ((66.47) + ((13.75) * peso2) + (5 * altura2) - ((6.75) * edad2) + 600) * 1.375;
+        return formulaHa;
+    }
+    function HombreC (peso3, altura3, edad3) {
+        let formulaHb = ((66.47) + ((13.75) * peso3) + (5 * altura3) - ((6.75) * edad3) - 600) * 1.375;
+        return formulaHb;
+    }
+    function MujerA (peso1, altura1, edad1) {
+        var formulaM = ((665.09) + ((9.56) * peso1) + ((1.84) * altura1) - ((4.67)* edad1)) * 1.375;
+        return formulaM;
+    }
+    function MujerB (peso2, altura2, edad2) {
+        var formulaM = ((665.09) + ((9.56) * peso2) + ((1.84) * altura2) - ((4.67)* edad2) + 600) * 1.375;
+        return formulaM;
+    } function MujerC (peso3, altura3, edad3) {
+        var formulaM = ((665.09) + ((9.56) * peso3) + ((1.84) * altura3) - ((4.67)* edad3) - 600) * 1.375;
+        return formulaM;
+    }function HombreD (peso1, altura1, edad1) {
+        let formulaH = ((66.47) + ((13.75) * peso1) + (5 * altura1) - ((6.75) * edad1)) * 1.55;
+        return formulaH;
+    }
+    function HombreE (peso2, altura2, edad2) {
+        let formulaHa = ((66.47) + ((13.75) * peso2) + (5 * altura2) - ((6.75) * edad2) + 600) * 1.55;
+        return formulaHa;
+    }
+    function HombreI (peso3, altura3, edad3) {
+        let formulaHb = ((66.47) + ((13.75) * peso3) + (5 * altura3) - ((6.75) * edad3) - 600) * 1.55;
+        return formulaHb;
+    }
+    function MujerD (peso1, altura1, edad1) {
+        var formulaM = ((665.09) + ((9.56) * peso1) + ((1.84) * altura1) - ((4.67)* edad1)) * 1.55;
+        return formulaM;
+    }
+    function MujerE (peso2, altura2, edad2) {
+        var formulaM = ((665.09) + ((9.56) * peso2) + ((1.84) * altura2) - ((4.67)* edad2) + 600) * 1.55;
+        return formulaM;
+    } function MujerI (peso3, altura3, edad3) {
+        var formulaM = ((665.09) + ((9.56) * peso3) + ((1.84) * altura3) - ((4.67)* edad3) - 600) * 1.55;
+        return formulaM;
+    }function HombreJ (peso1, altura1, edad1) {
+        let formulaH = ((66.47) + ((13.75) * peso1) + (5 * altura1) - ((6.75) * edad1)) * 1.725;
+        return formulaH;
+    }
+    function HombreK (peso2, altura2, edad2) {
+        let formulaHa = ((66.47) + ((13.75) * peso2) + (5 * altura2) - ((6.75) * edad2) + 600) * 1.725;
+        return formulaHa;
+    }
+    function HombreL (peso3, altura3, edad3) {
+        let formulaHb = ((66.47) + ((13.75) * peso3) + (5 * altura3) - ((6.75) * edad3) - 600) * 1.725;
+        return formulaHb;
+    }
+    function MujerJ (peso1, altura1, edad1) {
+        var formulaM = ((665.09) + ((9.56) * peso1) + ((1.84) * altura1) - ((4.67)* edad1)) * 1.725;
+        return formulaM;
+    }
+    function MujerK (peso2, altura2, edad2) {
+        var formulaM = ((665.09) + ((9.56) * peso2) + ((1.84) * altura2) - ((4.67)* edad2) + 600) * 1.725;
+        return formulaM;
+    } function MujerL (peso3, altura3, edad3) {
+        var formulaM = ((665.09) + ((9.56) * peso3) + ((1.84) * altura3) - ((4.67)* edad3) - 600) * 1.725;
+        return formulaM;
+    }function HombreO (peso1, altura1, edad1) {
+        let formulaH = ((66.47) + ((13.75) * peso1) + (5 * altura1) - ((6.75) * edad1)) * 1.9;
+        return formulaH;
+    }
+    function HombreP (peso2, altura2, edad2) {
+        let formulaHa = ((66.47) + ((13.75) * peso2) + (5 * altura2) - ((6.75) * edad2) + 600) * 1.9;
+        return formulaHa;
+    }
+    function HombreQ (peso3, altura3, edad3) {
+        let formulaHb = ((66.47) + ((13.75) * peso3) + (5 * altura3) - ((6.75) * edad3) - 600) * 1.9;
+        return formulaHb;
+    }
+    function MujerO (peso1, altura1, edad1) {
+        var formulaM = ((665.09) + ((9.56) * peso1) + ((1.84) * altura1) - ((4.67)* edad1)) * 1.9;
+        return formulaM;
+    }
+    function MujerP (peso2, altura2, edad2) {
+        var formulaM = ((665.09) + ((9.56) * peso2) + ((1.84) * altura2) - ((4.67)* edad2) + 600) * 1.9;
+        return formulaM;
+    } function MujerQ (peso3, altura3, edad3) {
+        var formulaM = ((665.09) + ((9.56) * peso3) + ((1.84) * altura3) - ((4.67)* edad3) - 600) * 1.9;
+        return formulaM;
+    }
+</script>
